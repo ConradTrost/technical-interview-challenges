@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AddTodoComponent } from './add-todo/add-todo.component';
-import { CardListComponent } from './todo-list/todo-list.component';
+import { AddTodoComponent } from './components/add-todo/add-todo.component';
+import { CardListComponent } from './components/todo-list/todo-list.component';
 
 @Component({
   selector: 'app-root',

@@ -10,9 +10,9 @@ import { Store } from '@ngrx/store';
 import {
   selectSortedTodosByDate,
   selectSortedTodosByPriority,
-} from '../store/todo.selector';
-import { removeTodo } from '../store/todo.actions';
-import { AppState, Priority, Todo } from '../store/todo.model';
+} from '../../store/todo.selector';
+import { removeTodo } from '../../store/todo.actions';
+import { AppState, Priority, Todo } from '../../store/todo.model';
 import { Observable } from 'rxjs';
 
 @Component({

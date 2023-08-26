@@ -12,9 +12,9 @@ import {
   FormGroupDirective,
 } from '@angular/forms';
 import { Store } from '@ngrx/store';
-import { addTodo } from '../store/todo.actions';
+import { addTodo } from '../../store/todo.actions';
 import { v4 as uuid } from 'uuid';
-import { AppState } from '../store/todo.model';
+import { AppState } from '../../store/todo.model';
 
 @Component({
   selector: 'app-add-todo',
