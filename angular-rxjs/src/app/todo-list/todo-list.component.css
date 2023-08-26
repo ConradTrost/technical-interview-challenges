@@ -1,0 +1,23 @@
+.app-options-container {
+  width: 100%;
+  margin: 1rem;
+  margin-bottom: 0;
+}
+
+.app-card-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.app-card {
+  margin: 1rem;
+  width: calc(100% - 2rem);
+}
+
+.priority-1 {
+  color: rgb(219, 42, 42);
+}
+
+.priority-2 {
+  color: rgb(216, 101, 34);
+}

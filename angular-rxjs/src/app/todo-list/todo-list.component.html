@@ -1,0 +1,31 @@
+<div class="app-options-container">
+  <mat-form-field>
+    <mat-label>Sort</mat-label>
+    <mat-select [formControl]="sortMethodInput">
+      <mat-option
+        *ngFor="let sortMethod of sortMethods"
+        [value]="sortMethod.value"
+        >{{ sortMethod.name }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="app-card-container">
+  <mat-card class="app-card" *ngFor="let todo of todos$ | async">
+    <mat-card-header>
+      <mat-card-subtitle [ngClass]="'priority-' + todo.priority">{{
+        Priority[todo.priority] + " Priority"
+      }}</mat-card-subtitle>
+      <mat-card-title>{{ todo.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <p>{{ todo.description }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="closeTodo(todo.id)">
+        COMPLETE
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</div>

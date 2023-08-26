@@ -1,0 +1,24 @@
+<form
+  [formGroup]="todoForm"
+  #formGroupDirective="ngForm"
+  (submit)="submitForm(formGroupDirective)"
+  class="app-vert-form"
+>
+  <mat-form-field>
+    <mat-label>Title</mat-label>
+    <input formControlName="title" required matInput />
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Priority</mat-label>
+    <mat-select formControlName="priority" required>
+      <mat-option [value]="1">High</mat-option>
+      <mat-option [value]="2">Medium</mat-option>
+      <mat-option [value]="3">Low</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Description</mat-label>
+    <textarea formControlName="description" matInput rows="8"></textarea>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Add Todo</button>
+</form>
